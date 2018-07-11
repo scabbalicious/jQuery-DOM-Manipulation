@@ -1,0 +1,114 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: 'Helvetica'
+}
+
+#content {
+	width: 500px;
+	border: 1px solid #02c6d6;
+}
+
+#content h2 {
+	background: #02c6d6;
+	flex-grow: 1;
+	text-align: left;
+	padding: 5px;
+	margin: 0;
+	font-size: 20px;
+	color: white;
+	font-weight: lighter;
+	text-decoration: none;
+}
+
+#content h2:hover {
+	opacity: 0.8;
+}
+
+.words {
+	height: 0;
+	overflow: auto;
+	transition: height 1s;
+}
+.words p {
+	padding: 10px;
+	color: #ccc;
+}
+.active {
+	height: 220px;
+
+}
+
+.carousel {
+	width: 1280px;
+	margin: 40px auto;
+	overflow: auto;
+}
+
+.slide-in {
+	width: 1280px;
+	height: 720px;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	padding: 3px;
+	border: 1px solid #888;
+	z-index: 50;
+}
+
+.slide-in img {
+	display: none;
+	transition: display 2s;
+	width: 1280px;
+	height: 720px;
+
+}
+
+.slide-in img.visible {
+	display: inline-block;
+	transition-timing-function: linear;
+}
+
+.prev, .next {
+	margin-top: 250px;
+	cursor: pointer;
+	color: white;
+	font-size: 48px;
+	background: rgba(0,0,0,0.5);
+}
+
+.prev:hover, .next:hover {
+	opacity: 0.8;
+}
+
+.prev {
+	float: left;
+	position: relative;
+	margin-right: -45px;
+	z-index: 100;
+}
+
+.next {
+	float: right;
+	position: relative;
+	margin-left: -45px;
+	z-index: 100;
+}
+
+.caption {
+	font-size: 30px;
+	color: white;
+	z-index: 100;
+}
+
+
+
+
